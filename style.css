@@ -1,0 +1,377 @@
+/* Негізгі стильдер */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1c1c1c, #3a4452);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+}
+
+/* Секция ауыстыру батырмалары */
+.toggle-btn {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 25px;
+  margin: 8px 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.toggle-btn.active {
+  background-color: #fb7c14;
+  border-color: #fb7c14;
+}
+
+/* Секциялардың ортақ стильдері */
+.calculator-container,
+.converter-container,
+.investment-container {
+  display: none;
+  margin-top: 20px;
+}
+
+.calculator-container.active,
+.converter-container.active,
+.investment-container.active {
+  display: block;
+}
+
+/* Калькулятор стилі */
+.calculator {
+  text-align: center;
+}
+
+input#inputBox {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+  background: #444;
+  color: #ffffff;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: right;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.calculator button {
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin: 6px;
+  border-radius: 12px;
+  background: #555;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.calculator button:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
+
+.calculator button.equalBtn {
+  background-color: #fb7c14;
+  color: #ffffff;
+}
+
+.calculator button.operator {
+  background-color: #3a3a3a;
+  color: #fb7c14;
+}
+
+/* Температура конвертері */
+.converter-container h2 {
+  font-size: 22px;
+  color: #fb7c14;
+  margin-bottom: 15px;
+}
+
+.converter-container input {
+  width: 90%;
+  border: none;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #444;
+  color: #ffffff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.converter-container button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fb7c14;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.converter-container button:hover {
+  background-color: #ff9334;
+  transform: scale(1.05);
+}
+
+.converter-container p#conversionResult {
+  margin-top: 10px;
+  font-size: 18px;
+  font-style: italic;
+  color: #6dee0a;
+}
+
+/* Инвестиция калькуляторы */
+.investment-container h2 {
+  font-size: 22px;
+  color: #fb7c14;
+  margin-bottom: 15px;
+}
+
+.investment-container input {
+  width: 90%;
+  border: none;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #444;
+  color: #ffffff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.investment-container button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fb7c14;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.invest
+ment-container button:hover {
+  background-color: #ff9334;
+  transform: scale(1.05);
+}
+
+.investment-container p#investmentResult {
+  margin-top: 10px;
+  font-size: 18px;
+  font-style: italic;
+  color: #4caf50;
+}
+
+/* Анимация батырмалары */
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+
+/* Адаптивті дизайн */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .calculator button,
+  .converter-container button,
+  .investment-container button {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  input#inputBox,
+  .converter-container input,
+  .investment-container input {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+/* Салмақ өлшеу стилі */
+.weight-calculator-container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+
+.weight-calculator-container h2 {
+  font-size: 24px;
+  color: #fb7c14;
+  margin-bottom: 15px;
+}
+
+.weight-calculator-container input {
+  width: 90%;
+  border: none;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #444;
+  color: #ffffff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weight-calculator-container button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fb7c14;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.weight-calculator-container button:hover {
+  background-color: #ff9334;
+  transform: scale(1.05);
+}
+
+.weight-calculator-container p#weightResult {
+  margin-top: 10px;
+  font-size: 18px;
+  font-style: italic;
+  color: #6dee0a;
+}
+
+/* Жалпы стильдер */
+.section {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+  text-align: center;
+}
+
+/* Стильдер */
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background-color: #fb7c14;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff9c3d;
+}
+
+#weightResult, #investmentResult {
+  text-align: center;
+  font-size: 18px;
+  color: #fb7c14;
+}
+
+/* Контейнерларды басқару */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Батырмаларды ерекшелеу */
+.toggle-btn.active {
+  background-color: #fb7c14;
+  color: white;
+}
+
+.age-calculator-container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+
+.age-calculator-container h2 {
+  font-size: 24px;
+  color: #fb7c14;
+  margin-bottom: 15px;
+}
+
+.age-calculator-container input {
+  width: 90%;
+  border: none;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #444;
+  color: #ffffff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.age-calculator-container button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fb7c14;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.age-calculator-container button:hover {
+  background-color: #ff9334;
+  transform: scale(1.05);
+}
+
+#ageResult {
+  margin-top: 10px;
+  font-size: 18px;
+  font-style: italic;
+  color: #6dee0a;
+}
+
